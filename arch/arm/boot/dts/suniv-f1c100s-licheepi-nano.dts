@@ -86,3 +86,17 @@
 	pinctrl-0 = <&uart1_pa_pins>;
 	status = "okay";
 };
+
+&otg_sram {
+	status = "okay";
+};
+
+&usb_otg {
+	dr_mode = "otg";
+	status = "okay";
+};
+
+&usbphy {
+	usb0_id_det-gpio = <&pio 4 3 GPIO_ACTIVE_HIGH>; /* PE3 */
+	status = "okay";
+};
